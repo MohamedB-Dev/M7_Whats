@@ -1,0 +1,109 @@
+<!--
+
+          i see you ;)
+          What you want ?
+
+-->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="copyright" content="Mohamed.B">
+<link rel="shortcut icon" href="Pic\logo.png">
+
+<!-- Start CSS -->
+<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<!-- End CSS -->
+
+<!-- Start Font -->
+<link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<!-- End Font -->
+
+<title>M7_Whats</title>
+</head>
+<body class="body">
+
+<!-- Start The Form -->
+<div class="jumbotron container text-center">
+  <div class="row">
+    <!-- The Form -->
+    <div class="m-2 col-md col-sm-12 order-lg-1 order-md-1 order-2">
+    <div class="form-group">
+      <form action="https://api.whatsapp.com/send?phone" target="_blank" method="GET">
+        <label class="">اهلاً ،  من فضلك ضع الرقم فقط بدون الصفر </label>
+        <div class="m-1">
+          <input type="text" class="form-control border" name="phone" pattern="[0-9]{12}" dir="ltr" autocomplete="off" autofocus="on" maxlength="12" required placeholder="96655555555"/>
+        </div>
+        <button type="submit" class="btn btn-dark">ارسال</button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#Modal">
+          فكرة الموقع
+        </button>
+        <!-- Button trigger modal -->
+      </form>
+    </div>
+  </div>
+  <!-- The Form -->
+  <!-- The Image -->
+  <div class="col-md col-sm-12 order-lg-2 order-md-2 order-1">
+      <img src="Pic/image.png" width="325">
+    </div>
+  <!-- The Image -->
+  </div>
+</div>
+<!-- End The Form -->
+
+<!-- script Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title mr-1" id="Modal">فكرة الموقع</h5>
+        <img src="Pic/idea.png" width="25">
+        <div class="close active" data-dismiss="modal" aria-label="Close">
+          <span>
+            <img src="Pic/x.png" width="25">
+          </span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p>الدخول الى محادثة الواتس اب دون حفظ الرقم</p>
+      </div>
+      <div class="copyright pr-3">
+         <h4 class="font-weight-bold">👨🏽‍💻 Coded By <a target="_blank" href="https://mohamed.softr.app">Mohamed.B</a></h4>
+      </div>
+  </div>
+  </div>
+</div>
+<!-- script Modal -->
+
+<!-- Start jquery , bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+ crossorigin="anonymous">
+</script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+ integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+ crossorigin="anonymous">
+</script>
+<script>
+  $('input').bind('click keyup', function(event){
+       if (
+           ($(this).val().length > 0) && ($(this).val().substr(0,3) != '966')
+           || ($(this).val() == '')
+           ){
+           $(this).val('966');
+       }
+   });
+   $(function () {
+     $('[data-toggle="popover"]').popover()
+   })
+</script>
+<!-- End jquery , bootstrap -->
+</body>
+</html>
